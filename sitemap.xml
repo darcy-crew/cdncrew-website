@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://cdncrew.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://cdncrew.com/services.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://cdncrew.com/work.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cdncrew.com/case-studies.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cdncrew.com/about.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cdncrew.com/contact.html</loc><changefreq>yearly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cdncrew.com/locations.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cdncrew.com/locations/calgary.html</loc><changefreq>yearly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cdncrew.com/locations/edmonton.html</loc><changefreq>yearly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cdncrew.com/locations/mountain-corridor.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cdncrew.com/locations/southern-alberta.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cdncrew.com/case-studies/aperol-building-wrap.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cdncrew.com/case-studies/arcteryx-market-mall.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cdncrew.com/case-studies/junction-88-building-graphics.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cdncrew.com/case-studies/telus-spark-banner.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cdncrew.com/case-studies/city-of-calgary-stephen-avenue.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cdncrew.com/terms-and-conditions.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://cdncrew.com/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>

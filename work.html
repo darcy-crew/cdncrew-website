@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Work — Graphic Installation Portfolio | CDN Crew</title>
+  <meta name="description" content="CDN Crew's installation portfolio. Building wraps, mall hoarding, wall murals, privacy film, retail displays and signage across Calgary and Alberta.">
+  <link rel="canonical" href="https://cdncrew.com/work.html">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ── Masonry editorial gallery ── */
+    .masonry {
+      columns: 3;
+      column-gap: 0.6rem;
+    }
+    .masonry-item {
+      break-inside: avoid;
+      margin-bottom: 0.6rem;
+      position: relative;
+      overflow: hidden;
+      display: block;
+      background: var(--grey-1);
+    }
+    .masonry-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s var(--ease);
+    }
+    .masonry-item:hover img { transform: scale(1.04); }
+    .masonry-item__info {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 1.75rem 1rem 0.875rem;
+      background: linear-gradient(to top, rgba(17,17,17,0.82) 0%, transparent 100%);
+      transform: translateY(100%);
+      transition: transform 0.28s var(--ease);
+    }
+    .masonry-item:hover .masonry-item__info { transform: translateY(0); }
+    .masonry-item__type {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+    .masonry-item__title {
+      font-size: 0.825rem;
+      font-weight: 500;
+      color: var(--white);
+      line-height: 1.35;
+    }
+    /* Filter bar */
+    .filter-bar {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .filter-btn {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.5rem 1.25rem;
+      border: 1.5px solid var(--grey-2);
+      border-radius: 100px;
+      background: transparent;
+      color: var(--grey-4);
+      cursor: pointer;
+      transition: all var(--fast) var(--ease);
+    }
+    .filter-btn:hover { border-color: var(--black); color: var(--black); }
+    .filter-btn.active { background: var(--black); border-color: var(--black); color: var(--white); }
+    .masonry-item[data-hidden="true"] { display: none; }
+
+    @media (max-width: 900px) { .masonry { columns: 2; } }
+    @media (max-width: 560px) { .masonry { columns: 1; } }
+  </style>
+  <meta property="og:title" content="Our Work — Graphic Installation Portfolio | CDN Crew">
+  <meta property="og:description" content="CDN Crew's installation portfolio. Building wraps, mall hoarding, wall murals, privacy film, retail displays and signage across Calgary and Alberta.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cdncrew.com/work.html">
+  <meta property="og:image" content="https://cdncrew.com/images/building-wrap-installation-downtown-calgary.webp">
+  <meta property="og:site_name" content="CDN Crew">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Our Work — Graphic Installation Portfolio | CDN Crew">
+  <meta name="twitter:description" content="CDN Crew's installation portfolio. Building wraps, mall hoarding, wall murals, privacy film, retail displays and signage across Calgary and Alberta.">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo"><img src="images/cdncrew-logo-white.svg" alt="CDN Crew" width="150" height="30"></a>
+    <ul class="nav__links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="work.html" class="active">Our Work</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+      <li><a href="locations.html">Locations</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn--dark nav__action">Get a Quote</a>
+    <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav__drawer">
+    <a href="services.html">Services</a>
+    <a href="work.html">Our Work</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="locations.html">Locations</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="btn btn--dark">Get a Quote</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero__bg">
+    <img src="images/Wall_Graphic_and_Floor_Graphic_Installation.webp" alt="CDN Crew graphic installation portfolio Alberta" loading="eager">
+  </div>
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Our Work</div>
+    <span class="t-eyebrow">Portfolio</span>
+    <h1 class="t-display">The installs<br>speak for themselves.</h1>
+    <p class="t-body-lg">Every project here was delivered on time, installed clean, and documented on completion. This is what your clients can expect when you partner with CDN Crew.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap">
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All Work</button>
+      <button class="filter-btn" data-filter="hoarding">Mall Hoarding</button>
+      <button class="filter-btn" data-filter="wall-mural">Wall Murals</button>
+      <button class="filter-btn" data-filter="building-wrap">Building Wraps</button>
+      <button class="filter-btn" data-filter="privacy-film">Privacy Film</button>
+      <button class="filter-btn" data-filter="retail">Retail Displays</button>
+      <button class="filter-btn" data-filter="signage">Signage</button>
+      <button class="filter-btn" data-filter="specialty">Specialty</button>
+    </div>
+
+    <div class="masonry" id="gallery">
+
+      <!-- Building wraps -->
+      <div class="masonry-item" data-category="building-wrap">
+        <img src="images/building-wrap-installation-downtown-calgary.webp"
+             alt="Large format multi-storey building wrap installation downtown Calgary — Aperol Spritz" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Building Wrap · Downtown Calgary</span>
+          <span class="masonry-item__title">Multi-storey exterior building wrap — road closure install</span>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="building-wrap">
+        <img src="images/building-facade-wrap-installation-calgary.webp"
+             alt="Full building facade wrap installation Calgary" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Building Facade Wrap · Calgary</span>
+          <span class="masonry-item__title">Multi-storey building facade graphic wrap</span>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="building-wrap">
+        <img src="images/large-format-building-graphic-installation-calgary.webp"
+             alt="Large format building graphic installation Calgary — Junction 88" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Building Graphics · Calgary</span>
+          <span class="masonry-item__title">20' × 55' exterior building graphic — residential development</span>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="building-wrap">
+        <img src="images/building-identity-graphic-installation-calgary.webp"
+             alt="Building identity graphic installation Calgary at dusk" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Building Identity · Calgary</span>
+          <span class="masonry-item__title">Building identity graphics — residential development</span>
+        </div>
+      </div>
+
+      <!-- Mall hoarding -->
+      <div class="masonry-item" data-category="hoarding">
+        <img src="images/mall-hoarding-installation-market-mall-calgary.webp"
+             alt="Mall hoarding installation Market Mall Calgary — Arc'teryx wraparound" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Mall Hoarding · Market Mall Calgary</span>
+          <span class="masonry-item__title">Full wraparound hoarding — pre-opening retail install</span>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="hoarding">
+        <img src="images/Mall_Construction_Hoarding_Graphic_Install.webp"
+             alt="Mall construction hoarding graphic installation Calgary" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Mall Hoarding · Calgary</span>
+          <span class="masonry-item__title">Large format mall hoarding install</span>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="hoarding">
+        <img src="images/mall-hoarding-installation-chinook-centre-calgary.webp"
+             alt="Mall hoarding installation CF Chinook Centre Calgary" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Mall Hoarding · CF Chinook Centre</span>
+          <span class="masonry-item__title">Pre-opening hoarding — CF Chinook Centre Calgary</span>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="hoarding">
+        <img src="images/retail-hoarding-installation-calgary.webp"
+             alt="Retail store hoarding installation Calgary" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Retail Hoarding · Calgary</span>
+          <span class="masonry-item__title">In-store renovation hoarding graphic install</span>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="hoarding">
+        <img src="images/curved-storefront-hoarding-installation-calgary.webp"
+             alt="Curved storefront hoarding installation Calgary mall" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Curved Hoarding · Calgary</span>
+          <span class="masonry-item__title">Curved storefront hoarding — complex geometry night install</span>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="hoarding">
+        <img src="images/construction-hoarding.webp"
+             alt="Construction hoarding graphic installation Alberta" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Construction Hoarding · Alberta</span>
+          <span class="masonry-item__title">Commercial construction hoarding install</span>
+        </div>
+      </div>
+
+      <!-- Wall murals -->
+      <div class="masonry-item" data-category="wall-mural">
+        <img src="images/Wall_Graphic_and_Floor_Graphic_Installation.webp"
+             alt="Wall and floor graphic installation Calgary — Scotiabank Saddledome" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Wall &amp; Floor Graphics · Scotiabank Saddledome</span>
+          <span class="masonry-item__title">Full wall and floor graphic install — active NHL venue</span>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="wall-mural">
+        <img src="images/Wall_Graphic_Installation.webp"
+             alt="Large format wall mural installation Calgary leisure centre" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Wall Mural · Calgary</span>
+          <span class="masonry-item__title">Full corridor wall mural — City of Calgary leisure facility</span>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="wall-mural">
+        <img src="images/Vinyl_Wall_Graphic_Installation.webp"
+             alt="Vinyl wall graphic installation corporate office Calgary" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Wall Graphics · Corporate Office Calgary</span>
+          <span class="masonry-item__title">Large format vinyl wall graphic — corporate fitness centre</span>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="wall-mural">
+        <img src="images/large-format-corner-wall-mural-installation.webp"
+             alt="Large format corner wall mural installation — floor to ceiling wrap" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Corner Wall Mural · Calgary</span>
+          <span class="masonry-item__title">Floor-to-ceiling corner wrap — continuous seam alignment</span>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="wall-mural">
+        <img src="images/office-wall-mural-installation-calgary.webp"
+             alt="Office wall mural installation Calgary — ATB Financial" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Wall Mural · Corporate Office Calgary</span>
+          <span class="masonry-item__title">Full wall graphic — corporate office environment</span>
+        </div>
+      </div>
+
+      <!-- Privacy film -->
+      <div class="masonry-item" data-category="privacy-film">
+        <img src="images/Office_Privacy_Film_Installation.webp"
+             alt="Office privacy film installation Calgary corporate boardroom" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Privacy Film · Corporate Office Calgary</span>
+          <span class="masonry-item__title">Patterned privacy film — multi-floor corporate install</span>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="privacy-film">
+        <img src="images/Window_Graphic_Installation.webp"
+             alt="Window graphic and film installation office Calgary" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Window Graphics · Calgary</span>
+          <span class="masonry-item__title">Office window graphics — corporate space</span>
+        </div>
+      </div>
+
+      <!-- Retail displays -->
+      <div class="masonry-item" data-category="retail">
+        <img src="images/Store_Window_Display_Installation.webp"
+             alt="Retail store window display installation Calgary — NARS Chinook Centre" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Store Display · CF Chinook Centre Calgary</span>
+          <span class="masonry-item__title">Retail window display — national beauty brand</span>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="retail">
+        <img src="images/window-graphic-installation-stephen-avenue-calgary.webp"
+             alt="Window graphic installation Stephen Avenue Calgary — City of Calgary" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Window Graphics · Stephen Avenue Calgary</span>
+          <span class="masonry-item__title">City of Calgary window graphic campaign — downtown revitalization</span>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="retail">
+        <img src="images/window-graphic-installation-calgary.webp"
+             alt="Window graphic installation Calgary commercial building" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Window Graphics · Calgary</span>
+          <span class="masonry-item__title">Commercial building window graphic install</span>
+        </div>
+      </div>
+
+      <!-- Signage -->
+      <div class="masonry-item" data-category="signage">
+        <img src="images/dimensional-reception-signage-installation-calgary.webp"
+             alt="Dimensional reception signage installation Calgary — WestJet" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Dimensional Signage · Calgary</span>
+          <span class="masonry-item__title">Corporate reception dimensional letter installation</span>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="signage">
+        <img src="images/dimensional-signage-installation-calgary-economic-development.webp"
+             alt="Dimensional signage installation Calgary Economic Development" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Dimensional Signage · Calgary</span>
+          <span class="masonry-item__title">Corporate logo and dimensional letter install</span>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="signage">
+        <img src="images/wayfinding-pylon-signage-installation-alberta.webp"
+             alt="Wayfinding pylon signage installation Alberta retail centre" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Wayfinding · Alberta</span>
+          <span class="masonry-item__title">Exterior wayfinding pylon — retail centre</span>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="signage">
+        <img src="images/exterior-signage-installation-calgary.webp"
+             alt="Exterior signage installation Calgary — Ronald McDonald House Alberta" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Exterior Signage · Calgary</span>
+          <span class="masonry-item__title">Exterior monument signage installation</span>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="signage">
+        <img src="images/Building-Sign.webp"
+             alt="Building signage installation Alberta" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Building Signage · Alberta</span>
+          <span class="masonry-item__title">Commercial building signage</span>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="signage">
+        <img src="images/large-format-outdoor-signage-installation-alberta.webp"
+             alt="Large format outdoor signage installation Alberta" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Outdoor Signage · Alberta</span>
+          <span class="masonry-item__title">Large format exterior signage install</span>
+        </div>
+      </div>
+
+      <!-- Specialty -->
+      <div class="masonry-item" data-category="specialty">
+        <img src="images/specialty-vehicle-graphic-installation-calgary.webp"
+             alt="Specialty vehicle graphic installation Calgary Fire Department" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Specialty Wrap · Calgary</span>
+          <span class="masonry-item__title">Specialty vehicle graphic wrap — precision panel alignment</span>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="specialty">
+        <img src="images/vehicle-graphic-installation-calgary.webp"
+             alt="Vehicle graphic installation Calgary — fleet branding" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Vehicle Graphics · Calgary</span>
+          <span class="masonry-item__title">Partial vehicle graphic wrap — commercial fleet</span>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="specialty">
+        <img src="images/exterior-banner-installation-telus-spark-calgary.webp"
+             alt="Exterior banner installation Telus Spark science centre Calgary" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Exterior Banner · Telus Spark Calgary</span>
+          <span class="masonry-item__title">High-access exterior banner installation</span>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="specialty">
+        <img src="images/overpass-banner-installation-calgary.webp"
+             alt="Overpass banner installation downtown Calgary — NBA House" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Overpass Banner · Downtown Calgary</span>
+          <span class="masonry-item__title">Street-level overpass banner — major sporting event</span>
+        </div>
+      </div>
+
+      <div class="masonry-item" data-category="specialty">
+        <img src="images/Show_Suite_Graphic_Installation.webp"
+             alt="Show suite graphic installation Calgary real estate" loading="lazy">
+        <div class="masonry-item__info">
+          <span class="masonry-item__type">Show Suite · Calgary</span>
+          <span class="masonry-item__title">Real estate show suite graphic package</span>
+        </div>
+      </div>
+
+    </div><!-- end masonry -->
+  </div>
+</section>
+
+<section class="cta-full">
+  <div class="wrap">
+    <span class="t-eyebrow">Add Your Project Here</span>
+    <h2 class="t-headline">Have an install coming up?</h2>
+    <p class="t-body-lg">We work with print shops, agencies, and installation companies across Alberta. Tell us what you need.</p>
+    <div class="cta-full__actions">
+      <a href="contact.html" class="btn btn--white">Request a Quote</a>
+      <a href="case-studies.html" class="btn btn--outline-white">Read Case Studies</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="images/cdncrew-logo-white.svg" alt="CDN Crew" width="140">
+        <p>Western Canada's trade-only graphic installation crew. We contract exclusively to print companies, advertising agencies, and installation companies across Alberta and BC.</p>
+        <div class="footer__contact">
+          <a href="tel:4033993939">403.399.3939</a>
+          <a href="mailto:office@cdncrew.com">office@cdncrew.com</a>
+          <span style="color:rgba(255,255,255,0.25);font-size:0.8rem;margin-top:0.5rem">Calgary, Alberta</span>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="services.html#wall-murals">Wall Murals</a></li>
+          <li><a href="services.html#hoarding">Mall Hoarding</a></li>
+          <li><a href="services.html#privacy-film">Privacy Film</a></li>
+          <li><a href="services.html#retail">Retail Displays</a></li>
+          <li><a href="services.html#signage">Signage &amp; Wayfinding</a></li>
+          <li><a href="services.html#showhomes">Show Homes</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Locations</h5>
+        <ul>
+          <li><a href="locations/calgary.html">Calgary</a></li>
+          <li><a href="locations/edmonton.html">Edmonton</a></li>
+          <li><a href="locations/mountain-corridor.html">Canmore &amp; Banff</a></li>
+          <li><a href="locations/southern-alberta.html">Southern Alberta</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="work.html">Our Work</a></li>
+          <li><a href="case-studies.html">Case Studies</a></li>
+          <li><a href="contact.html">Get a Quote</a></li>
+          <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2025 CDN Crew — A division of 2359555 Alberta Inc.</span>
+      <span>Trade only · Calgary-based · Alberta-wide</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.masonry-item').forEach(item => {
+      item.setAttribute('data-hidden', filter !== 'all' && item.dataset.category !== filter ? 'true' : 'false');
+    });
+  });
+});
+</script>
+</body>
+</html>
