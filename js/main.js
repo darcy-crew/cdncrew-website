@@ -1,3 +1,4 @@
+
 const nav=document.querySelector('.nav');
 if(nav)window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>10),{passive:true});
 const burger=document.querySelector('.nav__burger');

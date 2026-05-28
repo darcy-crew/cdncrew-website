@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Film Selection &amp; Spec Guide — CDN Crew</title>
+  <meta name="description" content="Working reference for print shops and agencies. Film selection matrix by surface, durability class, and environment. Cold-install specs to −20°C. Production and prep requirements from 15+ years in the field.">
+  <link rel="canonical" href="https://cdncrew.com/film-spec-guide.html">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+  <meta property="og:title" content="Film Selection &amp; Spec Guide — CDN Crew">
+  <meta property="og:description" content="Film picks by surface and durability class. Cold-install specs to −20°C. Production and prep requirements. 15+ years of field experience in one working reference.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cdncrew.com/film-spec-guide.html">
+  <meta property="og:site_name" content="CDN Crew">
+  <style>
+    /* ─── Extra CSS vars the spec guide needs ─── */
+    :root {
+      --ink: #111111;
+      --line: #d9ddd2;
+      --opt: #9a7b3f;
+      --sg-no: #8a8f82;
+      --cold: #3a6b86;
+      --yes: #48543c;
+      --olive-shadow: #2e3728;
+      --olive-light: #6b7a5a;
+    }
+
+    /* ─── Spec guide section wrapper ─── */
+    .spec-section {
+      background: #f2f4f0;
+      padding: clamp(3rem,6vw,5rem) 0;
+    }
+    .spec-section .sg-outer {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 var(--pad);
+    }
+
+    /* ─── Spec guide document card (.sheet) ─── */
+    .sheet {
+      max-width: 100%;
+      margin: 0 auto;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      box-shadow: 0 24px 60px -30px rgba(46,55,40,.35);
+    }
+
+    .sheet header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      padding: 26px 30px 22px;
+      border-bottom: 2px solid var(--olive);
+    }
+    .lockup { display:flex; align-items:center; gap:11px; }
+    .mark {
+      width: 42px; height: 42px; flex: 0 0 42px;
+      border-radius: 8px; background: var(--olive); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 800; font-size: 20px; letter-spacing: -1px; line-height: 1;
+    }
+    .mark span { margin-left: -7px; }
+    .wordmark {
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 800; font-size: 25px; letter-spacing: .5px;
+      color: var(--olive); line-height: .95; text-transform: uppercase;
+    }
+    .wordmark small {
+      display: block;
+      font-family: "Satoshi", sans-serif;
+      font-weight: 500; font-size: 9.5px; letter-spacing: 2.4px;
+      color: var(--olive-light); text-transform: uppercase; margin-top: 3px;
+    }
+    .title-block { text-align: right; }
+    .title-block h1 {
+      font-family: "Fraunces", serif;
+      font-weight: 600; font-size: 26px; letter-spacing: -.3px;
+      color: var(--ink); line-height: 1;
+    }
+    .title-block p { font-size: 11px; color: var(--olive-light); margin-top: 7px; }
+    .proof {
+      display: inline-block; margin-top: 9px;
+      font-size: 9.5px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase;
+      color: var(--olive); background: #f2f4f0;
+      border: 1px solid var(--line); padding: 4px 9px; border-radius: 99px;
+    }
+
+    .sheet .intro { padding: 18px 30px 16px; border-bottom: 1px solid var(--line); background: #fff; }
+    .sheet .intro p { font-size: 12px; color: #3f463a; line-height: 1.55; max-width: 1080px; }
+
+    .preamble {
+      background: #faf6ee; border-bottom: 1px solid var(--line);
+      border-left: 4px solid var(--opt); padding: 13px 30px 13px 26px;
+    }
+    .preamble p { font-size: 11.5px; color: #4a4233; line-height: 1.5; }
+    .preamble b { color: #1a1a1a; font-weight: 700; }
+
+    .keybar {
+      display: flex; flex-wrap: wrap; gap: 22px;
+      padding: 12px 30px; background: #f2f4f0;
+      border-bottom: 1px solid var(--line); align-items: center;
+    }
+    .keybar .lbl { font-size: 9.5px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--olive-light); }
+    .keybar .item { font-size: 11px; color: #3f463a; display: flex; align-items: center; gap: 7px; }
+    .chip {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-width: 20px; height: 20px; padding: 0 6px;
+      border-radius: 5px; font-weight: 700; font-size: 10px; color: #fff; letter-spacing: .4px;
+    }
+    .chip.T { background: var(--opt); }
+    .chip.R { background: var(--olive-light); }
+    .chip.P { background: var(--olive-shadow); }
+    .snow { color: var(--cold); font-weight: 700; }
+
+    .section-title {
+      font-family: "Fraunces", serif; font-weight: 600; font-size: 16px;
+      color: var(--olive); padding: 20px 30px 4px; letter-spacing: .2px;
+    }
+    .section-sub { font-size: 11px; color: var(--olive-light); padding: 0 30px 12px; }
+
+    .scroll { overflow-x: auto; }
+    .sheet table {
+      width: 100%; border-collapse: collapse; font-size: 11px; min-width: 1180px;
+    }
+    .sheet thead th {
+      background: var(--olive); color: #fff; font-weight: 700;
+      text-align: left; padding: 9px 10px; font-size: 9.2px;
+      letter-spacing: .6px; text-transform: uppercase; vertical-align: bottom;
+      border-right: 1px solid rgba(255,255,255,.12);
+    }
+    .sheet thead th:last-child { border-right: none; }
+    .band td {
+      background: var(--olive-shadow); color: #fff;
+      font-family: "Fraunces", serif; font-weight: 600;
+      font-size: 12px; letter-spacing: .4px; padding: 6px 12px;
+    }
+    .sheet tbody td {
+      padding: 9px 10px; border-bottom: 1px solid var(--line);
+      border-right: 1px solid var(--line); vertical-align: top;
+    }
+    .sheet tbody td:last-child { border-right: none; }
+    .sheet tbody tr:nth-child(even):not(.band) td { background: #fbfcfa; }
+    .scenario { font-weight: 700; color: var(--ink); width: 14%; }
+    .scenario small { display: block; font-weight: 500; color: var(--olive-light); font-size: 9.5px; margin-top: 2px; }
+    .cls { margin-top: 5px; display: flex; gap: 3px; }
+    .prod { font-weight: 700; color: var(--olive); }
+    .prod small { display: block; font-weight: 500; color: #5a6152; font-size: 9.5px; margin-top: 1px; }
+    .gf { font-weight: 700; color: #3f463a; }
+    .gf small { display: block; font-weight: 500; color: #6a705f; font-size: 9.5px; margin-top: 1px; }
+    .pt { font-weight: 700; color: #7a4a2a; }
+    .pt small { display: block; font-weight: 500; color: #7a6a5a; font-size: 9.5px; margin-top: 1px; }
+    .lam { font-weight: 700; font-size: 10px; }
+    .lam.yes { color: var(--yes); }
+    .lam.opt { color: var(--opt); }
+    .lam.no { color: var(--sg-no); }
+    .lam small { display: block; font-weight: 500; color: #6a705f; font-size: 9px; margin-top: 2px; text-transform: none; }
+    .na { color: #a7ab9f; font-style: italic; font-size: 10.5px; }
+    .na small { display: block; font-size: 9px; font-style: normal; }
+
+    .cards {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 14px; padding: 4px 30px 22px;
+    }
+    .card { border: 1px solid var(--line); border-radius: 10px; padding: 15px 16px; background: #fbfcfa; }
+    .card.feature { border-color: #b9c4ab; background: #f4f7ef; }
+    .card.pt-feature { border-color: #d6c2a6; background: #fbf6ed; }
+    .card h3 {
+      font-family: "Fraunces", serif; font-weight: 600;
+      font-size: 13px; color: var(--olive-shadow); margin-bottom: 4px;
+    }
+    .card .tag {
+      font-size: 9px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+      color: var(--olive-light); margin-bottom: 9px; display: block;
+    }
+    .card.pt-feature .tag { color: #7a4a2a; }
+    .card ul { list-style: none; }
+    .card li { font-size: 10.8px; color: #3f463a; padding: 3px 0 3px 14px; position: relative; line-height: 1.4; }
+    .card li::before {
+      content: ""; position: absolute; left: 0; top: 7px;
+      width: 5px; height: 5px; border-radius: 50%; background: var(--olive-light);
+    }
+    .card li b { color: var(--ink); font-weight: 700; }
+    .temp {
+      display: inline-block; background: #e8eff3; color: var(--cold);
+      font-weight: 700; font-size: 10px; padding: 1px 6px;
+      border-radius: 4px; border: 1px solid #cfe0e8;
+    }
+
+    .cold-band { background: #eef4f7; border-top: 2px solid var(--cold); border-bottom: 1px solid #cfe0e8; }
+    .cold-band .section-title { color: var(--cold); }
+
+    .panel { padding: 0 30px 22px; }
+    .preptable { width: 100%; border-collapse: collapse; font-size: 11px; }
+    .preptable th {
+      text-align: left; background: #f2f4f0; color: var(--olive-shadow);
+      font-weight: 700; font-size: 9.5px; letter-spacing: .6px; text-transform: uppercase;
+      padding: 8px 12px; border-bottom: 1px solid var(--line);
+    }
+    .preptable td { padding: 8px 12px; border-bottom: 1px solid var(--line); vertical-align: top; color: #3f463a; }
+    .preptable td:first-child { font-weight: 700; color: var(--ink); width: 22%; }
+    .preptable tr:nth-child(even) td { background: #fbfcfa; }
+    .prepwrap {}
+
+    .guide-foot {
+      padding: 14px 30px 18px; border-top: 1px solid var(--line);
+      display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+    }
+    .guide-foot p { font-size: 9.5px; color: var(--olive-light); line-height: 1.4; max-width: 840px; }
+    .guide-foot .stamp {
+      font-family: "Barlow Condensed", sans-serif; font-weight: 700;
+      font-size: 12px; letter-spacing: 1px; color: var(--olive);
+      text-transform: uppercase; white-space: nowrap;
+    }
+
+    @media (max-width: 760px) {
+      .sheet header { flex-direction: column; gap: 16px; padding: 20px; }
+      .title-block { text-align: left; }
+      .cards { grid-template-columns: 1fr; }
+    }
+    @media print {
+      @page { size: letter landscape; margin: 8mm; }
+      .sheet { border: none; box-shadow: none; max-width: none; }
+      .sheet table { min-width: 0; font-size: 7.6px; }
+      .sheet thead th { font-size: 7.2px; padding: 4px 5px; letter-spacing: .3px; }
+      .sheet tbody td { padding: 3.5px 5px; }
+      .band td { font-size: 9px; padding: 4px 5px; }
+      .scenario small,.prod small,.gf small,.pt small,.lam small,.card li,.preptable td,.na small { font-size: 7.2px; }
+      thead { display: table-header-group; } tr { page-break-inside: avoid; }
+      .cold-band, .prepwrap, .preamble, .sheet .intro { page-break-inside: avoid; }
+    }
+
+    /* ─── Resource download strip ─── */
+    .dl-strip {
+      background: var(--olive);
+      padding: clamp(2.5rem,5vw,4rem) 0;
+      text-align: center;
+    }
+    .dl-strip .t-eyebrow { color: rgba(255,255,255,.5); display: block; margin-bottom: 1rem; }
+    .dl-strip p { color: rgba(255,255,255,.65); font-size: 1rem; line-height: 1.7; max-width: 480px; margin: 0 auto 2rem; }
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo"><img src="images/cdncrew-logo-white.svg" alt="CDN Crew" width="150" height="30"></a>
+    <ul class="nav__links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="work.html">Our Work</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+      <li><a href="locations.html">Locations</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="film-spec-guide.html" class="active">Resources</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn--dark nav__action">Get a Quote</a>
+    <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav__drawer">
+    <a href="services.html">Services</a><a href="work.html">Our Work</a>
+    <a href="case-studies.html">Case Studies</a><a href="locations.html">Locations</a>
+    <a href="about.html">About</a>
+    <a href="film-spec-guide.html">Resources</a>
+    <a href="contact.html" class="btn btn--dark">Get a Quote</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero__bg"><img src="images/Office_Privacy_Film_Installation.webp" alt="" loading="eager"></div>
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Resources</div>
+    <span class="t-eyebrow">Trade Resource</span>
+    <h1 class="t-display">Film Selection<br>&amp; Spec Guide</h1>
+    <p class="t-body-lg">15+ years of field experience in one working reference. Film picks by surface and durability class, cold-install specs down to &minus;20&deg;C, and the prep requirements that keep installs from coming back.</p>
+    <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
+      <a href="cdn-crew-film-spec-guide.pdf" class="btn btn--white" download="CDN-Crew-Film-Spec-Guide.pdf">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" d="M12 16v-8m0 8l-3-3m3 3l3-3M3 17v2a2 2 0 002 2h14a2 2 0 002-2v-2"/></svg>
+        Download PDF
+      </a>
+      <span style="font-size:.75rem;color:rgba(255,255,255,.35);font-weight:500;">3M · Avery Dennison · Drytac · General Formulations · PhotoTex · Contra Vision</span>
+    </div>
+  </div>
+</div>
+
+<div class="trade-banner"><p><span>Trade partners only.</span> This guide is produced for print shops, agencies, and installation companies — not end clients.</p></div>
+
+<div class="spec-section">
+  <div class="sg-outer">
+    <div class="sheet">
+
+      <header>
+        <div class="lockup">
+          <div class="mark">C<span>C</span></div>
+          <div class="wordmark">CDN&nbsp;Crew<small>Trade-only installation</small></div>
+        </div>
+        <div class="title-block">
+          <h1>Film Selection &amp; Spec Guide</h1>
+          <p>3M&nbsp;&middot;&nbsp;Avery&nbsp;Dennison&nbsp;&middot;&nbsp;Drytac&nbsp;&middot;&nbsp;General&nbsp;Formulations&nbsp;&middot;&nbsp;PhotoTex&nbsp;&middot;&nbsp;Contra&nbsp;Vision</p>
+          <span class="proof">15+ yrs&nbsp;&middot;&nbsp;95% referral&nbsp;&middot;&nbsp;Alberta</span>
+        </div>
+      </header>
+
+      <div class="intro">
+        <p>This guide is a working reference for the print shops, marketing agencies and installation partners we work with across Alberta. It distils 15+ years of field experience into a one-page film-selection tool &mdash; what we&rsquo;d typically reach for given the substrate, the durability class, the environment, and Alberta&rsquo;s shoulder-season temperatures. It covers the six product lines we see most often on real jobs (3M, Avery Dennison, Drytac, General Formulations, PhotoTex and Contra Vision) plus the prep specs and cold-install rules that keep installs from coming back. Use it to brief a client, sanity-check a quote, or shortcut a product conversation with your supplier.</p>
+      </div>
+
+      <div class="preamble">
+        <p><b>This matrix is a starting point, not a complete specification.</b> Manufacturers change formulations, discontinue lines and update bulletins regularly, and no single sheet can cover every substrate, climate or project condition. <b>Always verify the current manufacturer&rsquo;s product data sheets and instruction bulletins before ordering, and run an on-site adhesion test before quoting permanence.</b> CDN Crew makes no warranty as to film selection, product performance, adhesion, or long-term durability &mdash; those sit with the manufacturer and the chosen product. <b>What we do warranty is our installation workmanship</b>, on every job we put our name on.</p>
+      </div>
+
+      <div class="keybar">
+        <span class="lbl">Durability class</span>
+        <span class="item"><span class="chip T">T</span> Temporary &mdash; &le;6 mo, promo/event, peel-clean, usually no lam</span>
+        <span class="item"><span class="chip R">R</span> Removable &mdash; ~1&ndash;3 yr, clean removal expected, retail/office</span>
+        <span class="item"><span class="chip P">P</span> Permanent &mdash; 3 yr+, max adhesion, exterior &amp; wayfinding</span>
+        <span class="item"><span class="snow">&#10052;</span> = cold-install option exists &mdash; see cold panel</span>
+      </div>
+
+      <div class="section-title">Film selection matrix &mdash; by application</div>
+      <div class="section-sub">Scan to your surface, read across. Brand picks are typical first choices &mdash; always confirm the current product bulletin for your batch.</div>
+      <div class="scroll">
+      <table>
+        <thead>
+          <tr><th>Surface / Scenario</th><th>3M</th><th>Avery Dennison</th><th>Drytac</th><th>General Formulations</th><th>PhotoTex</th><th>Laminate &amp; notes</th></tr>
+        </thead>
+        <tbody>
+
+          <tr class="band"><td colspan="7">Interior walls</td></tr>
+          <tr>
+            <td class="scenario">Smooth painted drywall<small>Promo / short-run</small><div class="cls"><span class="chip T">T</span></div></td>
+            <td class="prod">IJ40C-10<small>Removable, low-tack</small></td>
+            <td class="prod">MPI 2611<small>Removable; semi-gloss+ paint</small></td>
+            <td class="prod">ReTac Smooth 75/150<small>Ultra-removable</small></td>
+            <td class="gf">226 WallMark<small>matte, removable, 3-yr</small></td>
+            <td class="pt">PhotoTex PSA<small>polyester fabric, repositionable</small></td>
+            <td class="lam opt">OPTIONAL<small>Matte only if high-touch</small></td>
+          </tr>
+          <tr>
+            <td class="scenario">Smooth painted drywall<small>Office / retail mural</small><div class="cls"><span class="chip R">R</span></div></td>
+            <td class="prod">IJ40 / IJ35C</td>
+            <td class="prod">MPI 2611<small>or MPI 1105 (cast)</small></td>
+            <td class="prod">Polar Dynamic<small>removable option</small></td>
+            <td class="gf">226 WallMark<small>removable</small></td>
+            <td class="pt">PhotoTex PSA<small>Class A fire &middot; PVC-free &middot; LEED</small></td>
+            <td class="lam opt">OPTIONAL<small>Luster/matte for cleanability</small></td>
+          </tr>
+          <tr>
+            <td class="scenario">Smooth painted drywall<small>Permanent / premium</small><div class="cls"><span class="chip P">P</span></div></td>
+            <td class="prod">IJ35C<small>Cast, flat</small></td>
+            <td class="prod">MPI 1105<small>Cast</small></td>
+            <td class="prod">Polar Dynamic<small>permanent option</small></td>
+            <td class="gf">226HTR<small>high-tack removable</small></td>
+            <td class="na">&mdash;<small>fabric is removable by design</small></td>
+            <td class="lam yes">RECOMMENDED<small>3M 8519/8520 &middot; DOL 1360 &middot; GF 100</small></td>
+          </tr>
+          <tr>
+            <td class="scenario">Textured wall <span class="snow">&#10052;</span><small>Brick &middot; CMU block &middot; stucco</small><div class="cls"><span class="chip R">R</span><span class="chip P">P</span></div></td>
+            <td class="prod">Envision LX480mC<small>or IJ180Cv3</small></td>
+            <td class="prod">MPI 1105<small>or MPI 2600 textured</small></td>
+            <td class="prod">ReTac Textures (R)<small>Polar Grip (P)</small></td>
+            <td class="gf">229 WallMark canvas<small>or 226HTR (high-tack)</small></td>
+            <td class="pt">PhotoTex EX / EXS<small>for stucco / eggshell / texture</small></td>
+            <td class="lam yes">RECOMMENDED<small>3M 8548G/8549L &middot; heat + Rollepro, centre-out</small></td>
+          </tr>
+
+          <tr class="band"><td colspan="7">Exterior walls</td></tr>
+          <tr>
+            <td class="scenario">Smooth exterior wall<small>Sound painted surface</small><div class="cls"><span class="chip P">P</span></div></td>
+            <td class="prod">IJ180Cv3<small>Comply adhesive</small></td>
+            <td class="prod">MPI 1105<small>7-yr outdoor</small></td>
+            <td class="prod">Polar Premium<small>+ Protac Anti-Graffiti</small></td>
+            <td class="gf">226HTR + GF 242<small>HT removable + cast OL</small></td>
+            <td class="pt">PhotoTex + liquid lam<small>6&ndash;12 mo weather-rated</small></td>
+            <td class="lam yes">YES<small>UV + abrasion &middot; 3M 8518/8519 &middot; DOL 1360</small></td>
+          </tr>
+          <tr>
+            <td class="scenario">Textured / masonry exterior <span class="snow">&#10052;</span><small>Block &middot; brick &middot; stucco</small><div class="cls"><span class="chip P">P</span></div></td>
+            <td class="prod">Envision SV480mC<small>Extreme-temp, conformable</small></td>
+            <td class="prod">MPI 1105</td>
+            <td class="prod">Polar Street FX<small>alu, no-lam, rough surface</small></td>
+            <td class="gf">229HTR + GF 242<small>HT removable, textured</small></td>
+            <td class="pt">PhotoTex EX + liquid lam<small>shorter-term; cold-stable</small></td>
+            <td class="lam yes">YES<small>Heat-form into texture &middot; Street FX needs none</small></td>
+          </tr>
+
+          <tr class="band"><td colspan="7">Glass &amp; windows</td></tr>
+          <tr>
+            <td class="scenario">Interior glass graphic<small>First-surface print</small><div class="cls"><span class="chip R">R</span><span class="chip P">P</span></div></td>
+            <td class="prod">IJ35C / IJ40<small>or clear film</small></td>
+            <td class="prod">MPI 1105 / 2611</td>
+            <td class="prod">ViziPrint Impress (R)<small>Deco+ (P)</small></td>
+            <td class="gf">255 OptiMark<small>clear, removable &middot; 221 decal</small></td>
+            <td class="pt">PhotoTex PSA<small>original only &mdash; not Opaque on glass</small></td>
+            <td class="lam opt">OPTIONAL<small>Luster cuts glare + protects</small></td>
+          </tr>
+          <tr>
+            <td class="scenario">Exterior / storefront glass<small>Weather-facing</small><div class="cls"><span class="chip P">P</span></div></td>
+            <td class="prod">IJ180Cv3<small>or Scotchcal</small></td>
+            <td class="prod">MPI 1105</td>
+            <td class="prod">ViziPrint Deco+<small>clear PET, 7-yr</small></td>
+            <td class="gf">255 OptiMark + 242<small>or 207 cling (temp 3 mo)</small></td>
+            <td class="pt">PhotoTex + liquid lam<small>shorter-term option</small></td>
+            <td class="lam yes">YES<small>Clear lam + seal all edges</small></td>
+          </tr>
+          <tr>
+            <td class="scenario">Privacy / frost<small>Etched-glass look</small><div class="cls"><span class="chip R">R</span><span class="chip P">P</span></div></td>
+            <td class="prod">FASARA<small>polyester &middot; Dusted Crystal (vinyl)</small></td>
+            <td class="prod">Frosted / etch film</td>
+            <td class="prod">ViziPrint Deco SR</td>
+            <td class="na">&mdash;<small>No GF frost line</small></td>
+            <td class="na">&mdash;<small>Not a frost product</small></td>
+            <td class="lam no">NO<small>Finished decorative film</small></td>
+          </tr>
+          <tr>
+            <td class="scenario">One-way vision <span class="snow">&#10052;</span><small>Perforated &mdash; full panel below</small><div class="cls"><span class="chip T">T</span><span class="chip P">P</span></div></td>
+            <td class="prod">Scotchcal Perforated</td>
+            <td class="prod">MPI perforated</td>
+            <td class="na">&mdash; clear films only<small>(ViziPrint &ne; perf)</small></td>
+            <td class="gf">WindowMark 232/260/270/280<small>50/50&ndash;80/20 + GF 242 OL</small></td>
+            <td class="na">&mdash;<small>Not a perforated product</small></td>
+            <td class="lam opt">CLEAR LAM<small>Specialist: Contra Vision &mdash; see panel</small></td>
+          </tr>
+
+          <tr class="band"><td colspan="7">Floors</td></tr>
+          <tr>
+            <td class="scenario">Interior floor<small>Event / promo / retail</small><div class="cls"><span class="chip T">T</span></div></td>
+            <td class="prod">Floor print film<small>+ 3M floor lam</small></td>
+            <td class="prod">MPI 2600 Wall &amp; Floor<small>UL 410, no-lam textures</small></td>
+            <td class="prod">SpotOn Floor 200<small>no-lam, R-rated, 6 mo</small></td>
+            <td class="gf">Floor film + GF 108<small>Tedlar, slip-resistant OL</small></td>
+            <td class="na">&mdash;<small>Fabric &mdash; not slip-rated</small></td>
+            <td class="lam opt">ANTI-SLIP<small>Or use a no-lam floor-rated film</small></td>
+          </tr>
+          <tr>
+            <td class="scenario">Interior floor<small>High-traffic / long-term</small><div class="cls"><span class="chip P">P</span></div></td>
+            <td class="prod">IJ180Cv3<small>+ 3M floor system</small></td>
+            <td class="prod">MPI 1105<small>+ anti-slip</small></td>
+            <td class="prod">Polar Grip<small>+ Interlam Pro Emerytex</small></td>
+            <td class="gf">Floor film + GF 108<small>embossed slip lam</small></td>
+            <td class="na">&mdash;<small>Not slip-rated</small></td>
+            <td class="lam yes">YES<small>Slip-rated (R-rated)</small></td>
+          </tr>
+          <tr>
+            <td class="scenario">Exterior pavement <span class="snow">&#10052;</span><small>Sidewalk / asphalt decal</small><div class="cls"><span class="chip T">T</span></div></td>
+            <td class="prod">Outdoor street floor film</td>
+            <td class="prod">Outdoor floor film</td>
+            <td class="prod">Polar Street FX<small>alu, no-lam, no heat</small></td>
+            <td class="gf">Outdoor floor + GF 108<small>slip-resistant Tedlar</small></td>
+            <td class="na">&mdash;<small>Not slip-rated</small></td>
+            <td class="lam yes">YES outdoor<small>Street FX needs none</small></td>
+          </tr>
+
+          <tr class="band"><td colspan="7">Hoarding</td></tr>
+          <tr>
+            <td class="scenario">Mall / interior construction<small>Coroplast &middot; Sintra/PVC &middot; painted ply</small><div class="cls"><span class="chip T">T</span><span class="chip R">R</span></div></td>
+            <td class="prod">IJ40 / IJ35C<small>mounted or direct</small></td>
+            <td class="prod">MPI 2611 / 1105</td>
+            <td class="prod">Polar Dynamic</td>
+            <td class="gf">226 WallMark &middot; 116<small>116 = clear mounting film</small></td>
+            <td class="pt">PhotoTex PSA<small>Class A fire &mdash; good for enclosed malls</small></td>
+            <td class="lam opt">MATTE<small>High-touch corridor &middot; mind fire rating in enclosed malls</small></td>
+          </tr>
+          <tr>
+            <td class="scenario">Exterior construction <span class="snow">&#10052;</span><small>MDO ply &middot; Dibond / Alupanel</small><div class="cls"><span class="chip P">P</span></div></td>
+            <td class="prod">IJ180Cv3<small>or Scotchcal</small></td>
+            <td class="prod">MPI 1105</td>
+            <td class="prod">Polar Premium<small>+ Protac Anti-Graffiti</small></td>
+            <td class="gf">Cast print + GF 108<small>Tedlar, graffiti-resistant</small></td>
+            <td class="pt">PhotoTex + liquid lam<small>shorter-term; cold-stable</small></td>
+            <td class="lam yes">YES<small>+ anti-graffiti at street level &middot; cold &rarr; X-Treme / Concept 203</small></td>
+          </tr>
+          <tr>
+            <td class="scenario">Fence line / freestanding<small>Mesh banner &middot; skid signs</small><div class="cls"><span class="chip T">T</span><span class="chip P">P</span></div></td>
+            <td class="na">&mdash;</td>
+            <td class="na">&mdash;</td>
+            <td class="na">&mdash;</td>
+            <td class="na">Printed PVC mesh<small>or Alupanel / Coroplast skid on frame</small></td>
+            <td class="na">&mdash;<small>Not a banner / mesh product</small></td>
+            <td class="lam no">N/A<small>Not film-on-glass &mdash; zip-tie / batten; spec print + hardware</small></td>
+          </tr>
+
+        </tbody>
+      </table>
+      </div>
+
+      <div class="cold-band">
+        <div class="section-title">&#10052; Cold installs &mdash; below 8&nbsp;&deg;C (46&nbsp;&deg;F)</div>
+        <div class="section-sub">Standard pressure-sensitive vinyl bottoms out around 5&ndash;10&nbsp;&deg;C (41&ndash;50&nbsp;&deg;F), and Avery MPI 1105 needs ~15&nbsp;&deg;C. These are the films actually rated colder.</div>
+        <div class="cards">
+          <div class="card pt-feature"><span class="tag">PhotoTex &mdash; the field favourite</span><h3>Peel &amp; Stick Fabric</h3>
+            <ul><li><b>Polyester fabric backing stays flexible</b> in cold; vinyl gets brittle</li><li>Manufacturer rates it for <b>extreme heat &amp; extreme cold</b> conditions</li><li>Class A fire &middot; PVC &amp; PFAS-free &middot; LEED &mdash; clean install for sensitive interiors</li><li>Liquid-laminate for outdoor / longer durability (6&ndash;12 mo)</li><li>Use <b>EX/EXS</b> on stucco / eggshell / texture &middot; original on smooth</li></ul></div>
+          <div class="card feature"><span class="tag">Drytac &mdash; walls &amp; windows</span><h3>Polar Grip + ReTac</h3>
+            <ul><li><b>Polar Grip</b> &mdash; exterior, to <span class="temp">&minus;20&nbsp;&deg;C / &minus;4&nbsp;&deg;F</span> (proven in BC winter)</li><li><b>ReTac Smooth / Textures</b> &mdash; removable interior walls &amp; windows, to <span class="temp">5&nbsp;&deg;C / 41&nbsp;&deg;F</span></li></ul></div>
+          <div class="card"><span class="tag">Walls &amp; signage</span><h3>Continental Grafix X-Treme</h3>
+            <ul><li>Rated to <span class="temp">&minus;15&nbsp;&deg;C / +5&nbsp;&deg;F</span></li><li>High-tack calendered, bonds to LSE plastics &amp; textured substrates</li><li>Up to 5-yr outdoor &mdash; extreme-cold workhorse</li></ul></div>
+          <div class="card"><span class="tag">General Formulations</span><h3>Concept 203</h3>
+            <ul><li>Rated to <span class="temp">+4&nbsp;&deg;C / +40&nbsp;&deg;F</span></li><li>Calendered, flat smooth surfaces only</li><li>Budget cold option for hoarding / panels</li></ul></div>
+          <div class="card"><span class="tag">Floors &amp; walls</span><h3>Continental Grafix Walk&amp;Wall</h3>
+            <ul><li>Rated to <span class="temp">&minus;4&nbsp;&deg;C / +25&nbsp;&deg;F</span></li><li>Textured non-slip, no lamination needed</li></ul></div>
+          <div class="card"><span class="tag">Perforated window</span><h3>Cold-spec perf</h3>
+            <ul><li><b>Contra Vision</b> to <span class="temp">+4&nbsp;&deg;C / 39&nbsp;&deg;F</span>; AutoGraph (overlaminated) to <span class="temp">0&nbsp;&deg;C / 32&nbsp;&deg;F</span></li><li><b>panoRama Innova Ice</b> &mdash; 60/40, to <span class="temp">&minus;15&nbsp;&deg;C / +5&nbsp;&deg;F</span>, no heat</li></ul></div>
+          <div class="card"><span class="tag">Technique &mdash; applies to all</span><h3>Stack the deck</h3>
+            <ul><li><b>Warm the substrate</b> &amp; store rolls warm until install</li><li><b>IPA mist</b> on adhesive buys ~6&nbsp;&deg;C of headroom</li><li><b>Post-heat &amp; re-roll</b> every edge; watch dew point / condensation</li><li>Below the film&rsquo;s min &mdash; walk. Failure shows up weeks later</li></ul></div>
+        </div>
+      </div>
+
+      <div class="section-title">Perforated window film &mdash; quick reference</div>
+      <div class="section-sub">One-way vision works while the inside is darker than outside, and reverses after dark (graphic disappears, interior visible). Set client expectations on night appearance.</div>
+      <div class="cards">
+        <div class="card feature"><span class="tag">Specialist range &mdash; Contra Vision</span><h3>Pick by lifespan</h3>
+          <ul>
+            <li><b>Performance</b> &mdash; premium white-on-black, up to <b>5 yr</b>; transit, building &amp; long-term storefront</li>
+            <li><b>Advance</b> &mdash; PVC-free PET, up to <b>3 yr</b>, lower carbon</li>
+            <li><b>Campaign</b> &mdash; value range, up to <b>2 yr</b>, short-term promo</li>
+            <li><b>Performance HD</b> &mdash; micro-perf (1&nbsp;mm holes), sharpest image &amp; smoothest see-through</li>
+            <li><b>Clear</b> &mdash; clear-backed for <b>interior</b>, keeps natural light &amp; clean look</li>
+          </ul></div>
+        <div class="card"><span class="tag">Application side</span><h3>Interior vs exterior</h3>
+          <ul>
+            <li><b>Exterior-applied:</b> white-face / black-back, graphics out &mdash; best outdoor visibility; laminate or edge-seal</li>
+            <li><b>Interior-applied:</b> clear-backed (Contra Vision Clear), viewed from outside, protected from weather</li>
+            <li>Also: 3M Scotchcal Perforated &middot; Avery MPI perforated &middot; GF WindowMark (232/260/270/280)</li>
+          </ul></div>
+        <div class="card"><span class="tag">Tint ratio (open area)</span><h3>See-through vs image</h3>
+          <ul>
+            <li><b>50/50</b> &mdash; balanced, common storefront</li>
+            <li><b>60/40</b> &mdash; brighter graphic, less see-through</li>
+            <li><b>70/30 &middot; 80/20</b> &mdash; max image, lowest outward view</li>
+            <li>Winter install? Use a cold-spec perf &mdash; see cold panel</li>
+          </ul></div>
+      </div>
+
+      <div class="prepwrap">
+        <div class="section-title">Production &amp; prep spec</div>
+        <div class="section-sub">What we need from the print shop, and what we do on site, to kill the seam / edge / adhesion callbacks.</div>
+        <div class="panel">
+          <table class="preptable">
+            <thead><tr><th>Spec</th><th>Standard</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td>Bleed</td><td>0.25&Prime;&ndash;0.5&Prime; loose graphics &middot; 0.75&Prime;&ndash;1&Prime; wrapping a substrate edge &middot; 0.125&Prime; flush-trim mounted</td><td>Tell us trimmed vs. wrap-edge before printing.</td></tr>
+              <tr><td>Panel overlap (seams)</td><td>0.5&Prime; smooth walls &middot; 1&Prime; textured &middot; butt / kiss-cut where seamless is needed</td><td>Sequence panels so overlap faces <b>away</b> from the main sightline &mdash; kills the shadow line.</td></tr>
+              <tr><td>Panel width / tiling</td><td>Plan to material &amp; printer width (commonly &le;54&Prime;)</td><td>Place seams at logical breaks (corners, mullions), not across a face or logo.</td></tr>
+              <tr><td>Surface prep</td><td>Clean with 70% IPA / degreaser, dry fully, dust-free</td><td>Don&rsquo;t use IPA on finished laminate faces (DOL-Z, high gloss) &mdash; it can matte them. PhotoTex Opaque: use damp rag only, not IPA.</td></tr>
+              <tr><td>Paint cure</td><td>Latex fully cured &mdash; often <b>30+ days</b> before any film</td><td>Fresh paint is the #1 hidden adhesion failure (same for PhotoTex).</td></tr>
+              <tr><td>Adhesion test</td><td>Walls: 3M MCS warranty needs &ge; <b>1000 g / 15 min</b></td><td>Test painted walls before quoting permanence; leave a scrap up a few days if you can.</td></tr>
+              <tr><td>Windows</td><td>Decide first-surface (interior-applied) vs second-surface; allow for frame / muntin overlap</td><td>Perf: interior clear-back vs exterior white/black &mdash; confirm view direction first.</td></tr>
+              <tr><td>Floors</td><td>Clean &amp; dry, no fresh wax / sealer, round the corners, tamp edges</td><td>Slip rating is a safety / liability item in public spaces &mdash; don&rsquo;t skip it.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="guide-foot">
+        <p>Full terms at top of sheet. Confirm against current 3M, Avery Dennison, Drytac, General Formulations, PhotoTex and Contra Vision product &amp; instruction bulletins for your batch. No vehicle/fleet films listed by design.</p>
+        <span class="stamp">CDN Crew &middot; cdncrew.com</span>
+      </div>
+
+    </div><!-- /.sheet -->
+  </div>
+</div>
+
+<div class="dl-strip">
+  <div class="wrap">
+    <span class="t-eyebrow">Download the guide</span>
+    <p>Keep it in your project folder. Send it to your print team. Use it to sanity-check a film spec before ordering.</p>
+    <a href="cdn-crew-film-spec-guide.pdf" class="btn btn--white" download="CDN-Crew-Film-Spec-Guide.pdf">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" d="M12 16v-8m0 8l-3-3m3 3l3-3M3 17v2a2 2 0 002 2h14a2 2 0 002-2v-2"/></svg>
+      Download PDF
+    </a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="images/cdncrew-logo-white.svg" alt="CDN Crew" width="140">
+        <p>Western Canada's trade-only graphic installation crew. We contract exclusively to print companies, advertising agencies, and installation companies across Alberta and BC.</p>
+        <div class="footer__contact">
+          <a href="tel:4033993939">403.399.3939</a>
+          <a href="mailto:office@cdncrew.com">office@cdncrew.com</a>
+          <span style="color:rgba(255,255,255,.25);font-size:.8rem;margin-top:.5rem">Calgary, Alberta</span>
+        </div>
+      </div>
+      <div class="footer__col"><h5>Services</h5><ul>
+        <li><a href="services.html#wall-murals">Wall Murals</a></li>
+        <li><a href="services.html#hoarding">Mall Hoarding</a></li>
+        <li><a href="services.html#privacy-film">Privacy Film</a></li>
+        <li><a href="services.html#retail">Retail Displays</a></li>
+        <li><a href="services.html#signage">Signage &amp; Wayfinding</a></li>
+        <li><a href="services.html#showhomes">Show Homes</a></li>
+      </ul></div>
+      <div class="footer__col"><h5>Locations</h5><ul>
+        <li><a href="locations/calgary.html">Calgary</a></li>
+        <li><a href="locations/edmonton.html">Edmonton</a></li>
+        <li><a href="locations/mountain-corridor.html">Canmore &amp; Banff</a></li>
+        <li><a href="locations/southern-alberta.html">Southern Alberta</a></li>
+      </ul></div>
+      <div class="footer__col"><h5>Company</h5><ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="work.html">Our Work</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="film-spec-guide.html">Film Spec Guide</a></li>
+        <li><a href="contact.html">Get a Quote</a></li>
+        <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      </ul></div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2025 CDN Crew &mdash; A division of 2359555 Alberta Inc.</span>
+      <span>Trade only &middot; Calgary-based &middot; Alberta-wide</span>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
