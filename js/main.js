@@ -24,3 +24,21 @@ document.addEventListener('DOMContentLoaded',()=>{
     });
   }
 });
+
+
+// Resources dropdown toggle (touch / keyboard)
+document.querySelectorAll('.nav__dropdown-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const menu = btn.nextElementSibling;
+    const open = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+});
+document.addEventListener('click', e => {
+  if (!e.target.closest('.nav__has-dropdown')) {
+    document.querySelectorAll('.nav__dropdown-menu.open').forEach(m => {
+      m.classList.remove('open');
+      m.previousElementSibling.setAttribute('aria-expanded', false);
+    });
+  }
+});
