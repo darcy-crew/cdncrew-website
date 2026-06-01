@@ -125,4 +125,17 @@
     <priority>0.3</priority>
   </url>
 
+  <url>
+    <loc>https://cdncrew.com/cold-weather-installation</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cdncrew.com/faq</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
