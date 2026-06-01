@@ -1,9 +1,7 @@
 
-@import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=fraunces@300,400&display=swap');
-
 :root {
   --black:#111111;--off-black:#1a1a1a;--olive:#48543c;--olive-mid:#5a6849;--olive-pale:#f0f1ec;
-  --white:#ffffff;--warm:#f8f7f5;--grey-1:#f2f1ef;--grey-2:#e8e6e2;--grey-3:#c4c2bc;
+  --white:#ffffff;--warm:#f8f7f5;--grey-1:#f2f1ef;--grey-2:#e8e6e2;--grey-3:#7a7870;
   --grey-4:#8a8880;--grey-5:#4a4845;
   --font-body:'Satoshi',-apple-system,BlinkMacSystemFont,sans-serif;
   --font-display:'Fraunces',Georgia,serif;
