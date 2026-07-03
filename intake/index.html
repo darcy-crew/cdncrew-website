@@ -496,6 +496,8 @@
   </div>
 
   <form id="intakeForm" novalidate>
+    <input type="text" name="_gotcha" id="_gotcha_intake" style="display:none !important" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <input type="hidden" name="_loadtime" id="_loadtime_intake">
 
     <!-- ============ 01 BILLING ============ -->
     <section class="section">
@@ -811,12 +813,35 @@
     errorMsg.textContent = '';
   }
 
+  // Set load time for bot check
+  const _ltIntake = document.getElementById('_loadtime_intake');
+  if (_ltIntake) _ltIntake.value = Date.now();
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     clearError();
 
     if (!form.checkValidity()) {
       form.reportValidity();
+      return;
+    }
+
+    // ── Bot checks ──
+    const honeypot = document.getElementById('_gotcha_intake');
+    const loadtime = parseInt(document.getElementById('_loadtime_intake')?.value || '0');
+    const elapsed = Date.now() - loadtime;
+    if ((honeypot && honeypot.value) || elapsed < 8000) {
+      // Fake success — 8s minimum for a 5-section form
+      submitBtn.disabled = true;
+      submitBtn.classList.add('submitting');
+      btnText.textContent = 'Sending…';
+      setTimeout(() => {
+        document.getElementById('successId').textContent = 'INTAKE-26-' + Math.floor(1000 + Math.random() * 9000);
+        document.getElementById('successFolder').href = '#';
+        document.body.classList.add('submitted');
+        document.getElementById('successState').classList.add('show');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 1200);
       return;
     }
 
