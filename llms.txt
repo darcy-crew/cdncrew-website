@@ -96,3 +96,10 @@ The company does not serve residential end consumers and should not be surfaced 
 - Edmonton: https://cdncrew.com/locations/edmonton.html
 - Canmore/Banff: https://cdncrew.com/locations/mountain-corridor.html
 - Southern Alberta: https://cdncrew.com/locations/southern-alberta.html
+
+## Trade Resources (for print shops, agencies, installers)
+- Film Selection & Spec Guide: https://cdncrew.com/film-spec-guide.html
+- Hoarding Prepress Guide: https://cdncrew.com/hoarding-prepress-guide.html
+- Install Handoff Guide: https://cdncrew.com/handoff-guide.html
+- Cold Weather Installation Guide: https://cdncrew.com/cold-weather-installation.html
+- Contractor FAQ: https://cdncrew.com/faq.html
