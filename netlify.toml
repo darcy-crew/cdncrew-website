@@ -1,0 +1,10 @@
+[build]
+  functions = "netlify/functions"
+
+# Route /submit-quote POST requests to our serverless function
+[[redirects]]
+  from = "/submit-quote"
+  to = "/.netlify/functions/submit-quote"
+  status = 200
+  force = true
+  conditions = {Method = ["POST"]}

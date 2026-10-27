@@ -22,6 +22,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Request an Installation Quote | CDN Crew Alberta">
   <meta name="twitter:description" content="Trade partners: request a graphic installation quote from CDN Crew. Calgary, Edmonton, and Alberta-wide. We respond within one business day. 403.399.3939.">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -87,11 +88,12 @@
       </div>
     </div>
     <div class="form-box">
-      <form class="quote-form" action="https://formspree.io/f/xbdponqe" method="POST">
-        <input type="hidden" name="_replyto" value="cindy@cdncrew.com">
-        <input type="hidden" name="_subject" value="New CDN Crew Quote Request">
-        <input type="text" name="_gotcha" id="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <input type="hidden" name="_loadtime" id="_loadtime">
+      <form class="quote-form" id="quoteForm" action="/submit-quote" method="POST">
+        <!-- Honeypot — bots fill this, humans don't -->
+        <div style="position:absolute;left:-9999px;top:-9999px" aria-hidden="true">
+          <label for="website">Website (leave blank)</label>
+          <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
+        </div>
         <div class="form-row">
           <div class="field"><label>Your Name *</label><input type="text" name="name" required placeholder="Jane Smith"></div>
           <div class="field"><label>Company *</label><input type="text" name="company" required placeholder="Acme Print Co."></div>
@@ -111,7 +113,9 @@
         <div class="form-row form-row--full">
           <div class="field"><label>Project details *</label><textarea name="details" required placeholder="Scope, dimensions, number of locations, access restrictions, print files ready or still in progress..."></textarea></div>
         </div>
-        <button type="submit" class="btn btn--dark form-submit">Submit Quote Request <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></button>
+        <!-- Cloudflare Turnstile — invisible challenge, blocks bots -->
+        <div class="cf-turnstile" data-sitekey="TURNSTILE_SITE_KEY" data-theme="light" style="margin-bottom:.75rem"></div>
+        <button type="submit" class="btn btn--dark form-submit" id="submitBtn">Submit Quote Request <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></button>
         <p style="text-align:center;font-size:.75rem;color:var(--grey-4);margin-top:.875rem">Trade partners only. We don't work directly with end consumers.</p>
       </form>
     </div>
@@ -164,5 +168,12 @@
   </div>
 </footer>
 <script src="js/main.js"></script>
+<script>
+  document.getElementById('quoteForm').addEventListener('submit', function(e) {
+    var btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+  });
+</script>
 </body>
 </html>
