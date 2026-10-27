@@ -22,7 +22,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Request an Installation Quote | CDN Crew Alberta">
   <meta name="twitter:description" content="Trade partners: request a graphic installation quote from CDN Crew. Calgary, Edmonton, and Alberta-wide. We respond within one business day. 403.399.3939.">
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -87,37 +87,16 @@
         <p style="margin-top:.4rem;font-size:.8rem;color:var(--grey-4)">Available 24/7 for project advice and site visits</p>
       </div>
     </div>
-    <div class="form-box">
-      <form class="quote-form" id="quoteForm" action="/submit-quote" method="POST">
-        <!-- Honeypot — bots fill this, humans don't -->
-        <div style="position:absolute;left:-9999px;top:-9999px" aria-hidden="true">
-          <label for="website">Website (leave blank)</label>
-          <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
-        </div>
-        <div class="form-row">
-          <div class="field"><label>Your Name *</label><input type="text" name="name" required placeholder="Jane Smith"></div>
-          <div class="field"><label>Company *</label><input type="text" name="company" required placeholder="Acme Print Co."></div>
-        </div>
-        <div class="form-row">
-          <div class="field"><label>Email *</label><input type="email" name="email" required placeholder="jane@company.com"></div>
-          <div class="field"><label>Phone</label><input type="tel" name="phone" placeholder="403-555-0100"></div>
-        </div>
-        <div class="form-row">
-          <div class="field"><label>You are a *</label><select name="type" required><option value="">Select...</option><option>Print shop / printer</option><option>Marketing / advertising agency</option><option>Installation company</option><option>General contractor</option><option>Other trade partner</option></select></div>
-          <div class="field"><label>Service needed *</label><select name="service" required><option value="">Select...</option><option>Wall Murals &amp; Large Format</option><option>Mall / Construction Hoarding</option><option>Office Privacy Film</option><option>Retail / Store Display</option><option>Signage &amp; Wayfinding</option><option>Show Home / Sales Centre</option><option>Multiple / Not sure</option></select></div>
-        </div>
-        <div class="form-row">
-          <div class="field"><label>Install location *</label><input type="text" name="location" required placeholder="e.g. Calgary, AB — Chinook Centre"></div>
-          <div class="field"><label>Required by</label><input type="text" name="timeline" placeholder="e.g. March 15, ASAP, flexible"></div>
-        </div>
-        <div class="form-row form-row--full">
-          <div class="field"><label>Project details *</label><textarea name="details" required placeholder="Scope, dimensions, number of locations, access restrictions, print files ready or still in progress..."></textarea></div>
-        </div>
-        <!-- Cloudflare Turnstile — invisible challenge, blocks bots -->
-        <div class="cf-turnstile" data-sitekey="0x4AAAAAAAAAFnYl20cIFEehnDb" data-theme="light" style="margin-bottom:.75rem"></div>
-        <button type="submit" class="btn btn--dark form-submit" id="submitBtn">Submit Quote Request <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></button>
-        <p style="text-align:center;font-size:.75rem;color:var(--grey-4);margin-top:.875rem">Trade partners only. We don't work directly with end consumers.</p>
-      </form>
+    <div class="form-box" style="padding:0;background:transparent;box-shadow:none;border:none;">
+      <iframe id="crewcor-request" src="https://crewcor.com/request/6b8e1b9230bd48e48a870d4d18ad2d2a?embed=1" title="Request an installation" style="width:100%;height:1400px;border:0;display:block"></iframe>
+      <script>
+      window.addEventListener("message", function (e) {
+        if (e.origin !== "https://crewcor.com" || !e.data || !e.data.crewcorFormHeight) return;
+        var f = document.getElementById("crewcor-request");
+        f.style.height = e.data.crewcorFormHeight + "px";
+        if (e.data.crewcorFormSent) f.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+      </script>
     </div>
   </div>
 </div></section><footer class="footer">
@@ -168,12 +147,6 @@
   </div>
 </footer>
 <script src="js/main.js"></script>
-<script>
-  document.getElementById('quoteForm').addEventListener('submit', function(e) {
-    var btn = document.getElementById('submitBtn');
-    btn.disabled = true;
-    btn.textContent = 'Sending…';
-  });
-</script>
+
 </body>
 </html>
